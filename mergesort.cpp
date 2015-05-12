@@ -4,10 +4,9 @@ using namespace std;
 void merge(vector<int>& arr,int l,int mid,int r)
 {
 	vector<int> newarr(r-l+1);
-	int i=l,j=mid+1,k=0,var;
+	int i=l,j=mid+1,k=0,var=1;
 	while(i<=mid || j<=r )
 	{
-		var=1;
 		if(i>mid) var = 0;
 		if(var==0 || (j<=r && arr[i]>arr[j])){
 			newarr[k]=arr[j];
